@@ -1,17 +1,8 @@
 package com.kobiton.shadowdom.ui.login;
 
 import android.app.Activity;
-
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProviders;
-
 import android.os.Build;
 import android.os.Bundle;
-
-import androidx.annotation.Nullable;
-import androidx.annotation.StringRes;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.KeyEvent;
@@ -25,11 +16,15 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.kobiton.shadowdom.R;
-import com.kobiton.shadowdom.ui.login.LoginViewModel;
-import com.kobiton.shadowdom.ui.login.LoginViewModelFactory;
 import com.microsoft.appcenter.AppCenter;
 import com.microsoft.appcenter.analytics.Analytics;
 import com.microsoft.appcenter.crashes.Crashes;
+
+import androidx.annotation.Nullable;
+import androidx.annotation.StringRes;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProviders;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -87,7 +82,7 @@ public class LoginActivity extends AppCompatActivity {
 
                 //Complete and destroy login activity once successful
                 finish();
-                AppCenter.start(getApplication(), "7745823a-a965-488b-b129-afb281add336",
+                AppCenter.start(getApplication(), "dc18aac2-ebe5-41ab-9630-d0c5caa5e5af",
                         Analytics.class, Crashes.class);
             }
         });
