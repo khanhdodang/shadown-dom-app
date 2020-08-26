@@ -27,6 +27,9 @@ import android.widget.Toast;
 import com.kobiton.shadowdom.R;
 import com.kobiton.shadowdom.ui.login.LoginViewModel;
 import com.kobiton.shadowdom.ui.login.LoginViewModelFactory;
+import com.microsoft.appcenter.AppCenter;
+import com.microsoft.appcenter.analytics.Analytics;
+import com.microsoft.appcenter.crashes.Crashes;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -84,6 +87,8 @@ public class LoginActivity extends AppCompatActivity {
 
                 //Complete and destroy login activity once successful
                 finish();
+                AppCenter.start(getApplication(), "7745823a-a965-488b-b129-afb281add336",
+                        Analytics.class, Crashes.class);
             }
         });
 
